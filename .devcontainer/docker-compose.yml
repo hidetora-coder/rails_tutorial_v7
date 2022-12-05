@@ -20,5 +20,5 @@ services:
       - ~/.gitconfig:/root/.gitconfig #gitの設定
     command: sleep infinity
 volumes:
-  
   bundle-volume:
+  
