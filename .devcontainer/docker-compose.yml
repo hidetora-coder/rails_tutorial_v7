@@ -14,6 +14,11 @@ services:
     volumes:
       - ..:/home/vscode/environment:cached
       - bundle-volume:/usr/local/bundle
+      # 参照　https://qiita.com/xkent/items/ee3551b8fb36d268c549 コンテナ内からsshを利用するため
+      - .:/workspace:cached
+      - ~/.ssh:/root/.ssh #sshキー
+      - ~/.gitconfig:/root/.gitconfig #gitの設定
     command: sleep infinity
 volumes:
+  
   bundle-volume:
